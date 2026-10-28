@@ -23,30 +23,47 @@
                 margin: 0;
             }
 
-            /* Background Header Image & Overlay */
+            /* LinkedIn Style Cover Banner & Overlapping Profile Photo */
             .header {
                 position: relative;
                 text-align: center;
-                /* Ganti path 'assets/img/bg-header.jpg' sesuai lokasi gambar background Anda */
-                background: linear-gradient(135deg, rgba(44, 62, 80, 0.88), rgba(26, 188, 156, 0.75)), 
-                            url('assets/img/bg-header.jpg') center/cover no-repeat;
+                background: #2c3e50;
                 color: white;
             }
 
-            /* Avatar Wrapper with Image Background */
-            .avatar-wrapper {
+            /* Banner Sampul (Cover Photo) */
+            .cover-banner {
+                width: 100%;
+                height: 260px;
+                /* Ganti 'assets/img/cover-banner.jpg' dengan nama/path foto background sampul Anda */
+                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), 
+                            url('assets/img/cover-banner.jpg') center/cover no-repeat;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            }
+
+            /* Wrapper Foto Profil yang Menumpuk di Bawah Banner */
+            .profile-avatar-container {
                 position: relative;
+                margin-top: -85px; /* Efek menumpuk di atas gambar sampul */
                 display: inline-block;
-                padding: 15px; /* Ketebalan bingkai background di belakang foto */
-                border-radius: 50%;
-                /* Ganti 'assets/img/bg-profile.jpg' sesuai dengan nama/path foto background Anda */
-                background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-                            url('assets/img/bg-profile.jpg') center/cover no-repeat;
-                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+                z-index: 5;
+            }
+
+            .masthead-avatar {
+                width: 170px;
+                height: 170px;
+                max-width: 100%;
+                object-fit: cover;
+                object-position: center top;
+                border-radius: 50% !important;
+                border: 5px solid #2c3e50; /* Frame lingkar memisah dari background banner */
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
-            .avatar-wrapper:hover {
-                transform: scale(1.03);
+
+            .masthead-avatar:hover {
+                transform: scale(1.05);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
             }
             .logo {
                 width: 50px;
@@ -236,13 +253,17 @@
             </div>
         </nav>
 
-        <!-- Masthead-->
+        <!-- Masthead (LinkedIn Style Header) -->
         <div class="header">
-            <header class="masthead bg-secondary text-white text-center">
-                <div class="inner-header flex">
+            <!-- Cover Banner Background Image -->
+            <div class="cover-banner"></div>
+
+            <header class="masthead bg-secondary text-white text-center pt-0">
+                <div class="inner-header flex pt-0">
                     <div class="container d-flex align-items-center flex-column">
-                        <!-- Masthead Avatar Image with Background Wrapper -->
-                        <div class="avatar-wrapper mb-4">
+                        
+                        <!-- Profile Photo Overlapping Cover Banner -->
+                        <div class="profile-avatar-container mb-3">
                             <img class="masthead-avatar" src="assets/img/portfolio/IMG_0980 (1).jpg" alt="Muhammad Risqi Nugraha" />
                         </div>
                         
