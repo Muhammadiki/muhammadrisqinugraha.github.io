@@ -23,47 +23,11 @@
                 margin: 0;
             }
 
-            /* LinkedIn Style Cover Banner & Overlapping Profile Photo */
             .header {
                 position: relative;
                 text-align: center;
                 background: #2c3e50;
                 color: white;
-            }
-
-            /* Banner Sampul (Cover Photo) */
-            .cover-banner {
-                width: 100%;
-                height: 260px;
-                /* Ganti 'assets/img/cover-banner.jpg' dengan nama/path foto background sampul Anda */
-                background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), 
-                            url('assets/img/cover-banner.jpg') center/cover no-repeat;
-                border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-            }
-
-            /* Wrapper Foto Profil yang Menumpuk di Bawah Banner */
-            .profile-avatar-container {
-                position: relative;
-                margin-top: -85px; /* Efek menumpuk di atas gambar sampul */
-                display: inline-block;
-                z-index: 5;
-            }
-
-            .masthead-avatar {
-                width: 170px;
-                height: 170px;
-                max-width: 100%;
-                object-fit: cover;
-                object-position: center top;
-                border-radius: 50% !important;
-                border: 5px solid #2c3e50; /* Frame lingkar memisah dari background banner */
-                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-
-            .masthead-avatar:hover {
-                transform: scale(1.05);
-                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
             }
             .logo {
                 width: 50px;
@@ -253,21 +217,13 @@
             </div>
         </nav>
 
-        <!-- Masthead (LinkedIn Style Header) -->
+        <!-- Masthead-->
         <div class="header">
-            <!-- Cover Banner Background Image -->
-            <div class="cover-banner">
-                <img src="assets/img/portfolio/IMG_2641.HEIC"/>
-            </div>
-
-            <header class="masthead bg-secondary text-white text-center pt-0">
-                <div class="inner-header flex pt-0">
+            <header class="masthead bg-secondary text-white text-center">
+                <div class="inner-header flex">
                     <div class="container d-flex align-items-center flex-column">
-                        
-                        <!-- Profile Photo Overlapping Cover Banner -->
-                        <div class="profile-avatar-container mb-3">
-                            <img class="masthead-avatar" src="assets/img/portfolio/IMG_0980 (1).jpg" alt="Muhammad Risqi Nugraha" />
-                        </div>
+                        <!-- Masthead Avatar Image-->
+                        <img class="masthead-avatar mb-4" src="assets/img/portfolio/IMG_0980 (1).jpg" alt="Muhammad Risqi Nugraha" />
                         
                         <!-- Masthead Heading-->
                         <h1 class="masthead-heading text-uppercase mb-0">Muhammad Risqi Nugraha</h1>
