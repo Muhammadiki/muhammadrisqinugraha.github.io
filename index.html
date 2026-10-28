@@ -33,16 +33,17 @@
                 color: white;
             }
 
-            /* Avatar Wrapper with Subtle Background Ring / Graphic */
+            /* Avatar Wrapper with Image Background */
             .avatar-wrapper {
                 position: relative;
                 display: inline-block;
-                padding: 12px;
+                padding: 15px; /* Ketebalan bingkai background di belakang foto */
                 border-radius: 50%;
-                /* Gambar background khusus di belakang foto profil */
-                background: linear-gradient(45deg, #ffc107, #1abc9c);
+                /* Ganti 'assets/img/bg-profile.jpg' sesuai dengan nama/path foto background Anda */
+                background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                            url('assets/img/bg-profile.jpg') center/cover no-repeat;
                 box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-                transition: transform 0.3s ease;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
             .avatar-wrapper:hover {
                 transform: scale(1.03);
